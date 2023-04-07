@@ -7,6 +7,9 @@ import zipfile
 pbar = None
 
 def show_progress(block_num, block_size, total_size):
+    '''
+    will show a progress bar during the download
+    '''
     global pbar
     if pbar is None:
         pbar = progressbar.ProgressBar(maxval=total_size)
@@ -20,6 +23,12 @@ def show_progress(block_num, block_size, total_size):
         pbar = None
 
 def RetrieveData(URL, rootpath="./data"):
+    '''
+    Download the zip file from URL if not already downloaded
+    and put it in the rootpath directory.
+    It is then extracted in the rootpath directory.
+    
+    '''
     if os.path.isdir(rootpath)==False:
         os.mkdir('./data')
         
