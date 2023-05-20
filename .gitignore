@@ -1,4 +1,4 @@
 /data/*
 .ipynb_checkpoints
-/__pycach__/*
 /wandb/*
+/utils/__pycache__/*
